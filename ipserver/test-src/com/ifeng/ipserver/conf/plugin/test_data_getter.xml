@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	
+	<config type="com.ifeng.common.dm.persist.hibernate.MappingConfig">
+		<mapping resource="com/ifeng/ipserver/bean/db/GovAndNetnameToGroup.hbm.xml" />
+	</config>
+	
+	<config name="persistFactory" type="com.ifeng.common.dm.persist.hibernate.PersistManagerFactoryHibernateImpl" config-file="hibernate.cfg.xml"/>
+
+	<config name="testdm"  type="com.ifeng.common.dm.PersistDataManager" bean-class="com.ifeng.ipserver.bean.db.GovAndNetnameToGroup" pm-factory=".persistFactory"/>
+	<config name="dataGetter" type="com.ifeng.ipserver.conf.plugin.DataGetterPlugin">
+		<data-manager type=".ReferenceConfig" reference="testdm"/>
+		<context-key value="test"/>
+	</config>
+</config>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<config name="rateCalculator" type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+		<interval type="int" value="6"/>
+		<period type="int" value="1000"/>
+	</config>
+	
+	<config name="rateCalculator1" type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+		<interval type="int" value="6"/>
+		<period type="int" value="1000"/>
+	</config>
+	
+	<config name="limitPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+				<or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="80"/>
+					<max-percent type="int" value="82"/>
+					<outof-percent type="int" value="2"/>
+				</or-plugin>
+				<or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="82"/>
+					<max-percent type="int" value="85"/>
+					<outof-percent type="int" value="3"/>
+				</or-plugin>
+				<or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="85"/>
+					<max-percent type="int" value="88"/>
+					<outof-percent type="int" value="4"/>
+				</or-plugin>
+				<or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="88"/>
+					<max-percent type="int" value="90"/>
+					<outof-percent type="int" value="5"/>
+				</or-plugin>
+				<or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="90"/>
+					<max-percent type="int" value="92"/>
+					<outof-percent type="int" value="6"/>
+				</or-plugin>
+				
+				<or-plugin name="ratePlugin90" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="92"/>
+					<max-percent type="int" value="95"/>
+					<outof-percent type="int" value="7"/>
+				</or-plugin>
+				<or-plugin name="ratePlugin90" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="95"/>
+					<max-percent type="int" value="100"/>
+					<outof-percent type="int" value="8"/>
+				</or-plugin>
+				<or-plugin name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+					<min-percent type="int" value="100"/>
+					<max-percent type="int" value="1000000000"/>
+					<outof-percent type="int" value="100"/>
+				</or-plugin>
+	</config>
+		
+	<config name="dynamicNode1" type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+		<rate-calculator type=".ReferenceConfig" reference="rateCalculator"/>
+		<bak-ipOrCname value="dilian"/>
+		<ipOrCname value="1.1.1.1"/>
+		<max-bandwidth type="int" value="2300000"/>
+		<min-rate-percent type="int" value="80"/>
+		<plugin type="com.ifeng.common.plugin.process.AndSuite">
+			<and-plugin type=".ReferenceConfig" reference="limitPlugin"/>
+		</plugin>
+		<ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+		     <or-plugin name="ratePlugin80" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+					<min-percent type="int" value="0"/>
+					<max-percent type="int" value="33"/>
+					<ip  value="1.1.1.1"/>
+			 </or-plugin>
+			 <or-plugin name="ratePlugin82" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+					<min-percent type="int" value="33"/>
+					<max-percent type="int" value="66"/>
+					<ip value="1.1.1.2"/>
+			 </or-plugin>
+			  <or-plugin name="ratePlugin83" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+					<min-percent type="int" value="66"/>
+					<max-percent type="int" value="100"/>
+					<ip value="1.1.1.3"/>
+			 </or-plugin>
+		</ip-plugin>
+		
+		
+		 <period type="int" value="6000"/>
+		<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+			<url value="http://119.147.244.124:8090/mrtg/119.147.244.65_54.html"/>
+			<conn-timeout type="java.lang.Integer" value="5000"/>
+			<read-timeout type="java.lang.Integer" value="10000"/>
+		</bandwidth-getter>
+	</config>
+		
+</config>

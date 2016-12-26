@@ -1,0 +1,309 @@
+<config>
+   <config name="configMap" type=".MapConfig">
+     <entry>
+       <key value="0-0-0-0-0"/>
+       <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="0-0-0-0-0"/>
+                    <ch-name value="正在直播"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636347C317C313030307CE587A4E587B0E58E9FE5889B2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+       <key value="0BEF180D-EB53-4FB6-9E29-EF988DFCE5F8"/>
+       <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="0BEF180D-EB53-4FB6-9E29-EF988DFCE5F8"/>
+                    <ch-name value="东南卫视"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636387C317C313030307CE4B89CE58D97E58DABE8A7862846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+
+       <key value="1-1-1-1-1"/>
+       <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="1-1-1-1-1"/>
+                    <ch-name value="正在直播"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636357C317C313030307CE587A4E587B0E79BB4E692AD2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+       <key value="270DE943-3CDF-45E1-8445-9403F93E80C4"/>
+       <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="270DE943-3CDF-45E1-8445-9403F93E80C4"/>
+                    <ch-name value="凤凰中文台"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636397C317C313030307CE587A4E587B0E4B8ADE696872846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+	   <key value="2c942450-2165-4750-80de-7dff9c224153"/>
+       <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="2c942450-2165-4750-80de-7dff9c224153"/>
+                    <ch-name value="凤凰香港台"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636377C317C313030307CE59089E69E97E58DABE8A7862846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+
+    <key value="3072FC61-4763-4BE9-AA19-2B241498775A"/>
+    <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="3072FC61-4763-4BE9-AA19-2B241498775A"/>
+                    <ch-name value="CNN"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313933307C317C313030307C434E4E2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+    <key value="35383695-26c3-4ce5-b535-0001abce11e4"/>
+    <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="35383695-26c3-4ce5-b535-0001abce11e4"/>
+                    <ch-name value="正在直播"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636337C317C313030307CE9BD90E9B281E794B5E8A7862846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+    <key value="4AC51C17-9FBE-47F2-8EE0-8285A66EAFF5"/>
+    <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="4AC51C17-9FBE-47F2-8EE0-8285A66EAFF5"/>
+                    <ch-name value="凤凰咨询台"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313633327C317C313030307CE587A4E587B0E8B584E8AEAF2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+    <key value="5435BFA3-210B-4F4F-A90F-BCB1C4C40D59"/>
+    <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="5435BFA3-210B-4F4F-A90F-BCB1C4C40D59"/>
+                    <ch-name value="CCTV"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313933317C317C313030307C434354562846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+         <key value="8550DAD6-8724-4474-8A95-F30967CAA294"/>
+          <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="8550DAD6-8724-4474-8A95-F30967CAA294"/>
+                    <ch-name value="云南卫视"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636367C317C313030307CE4B89CE696B9E5B091E584BF2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+      
+       <key value="93650A67-8BEA-4660-98E4-658CA832044E"/>
+          <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="93650A67-8BEA-4660-98E4-658CA832044E"/>
+                    <ch-name value="东方卫视"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313839337C317C313030307CE4B89CE696B9E58DABE8A7867C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+      
+       <key value="A487A585-D6EA-4FF0-B920-76CB244986BA"/>
+          <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="A487A585-D6EA-4FF0-B920-76CB244986BA"/>
+                    <ch-name value="正在直播"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313839327C317C313030307CE69785E6B8B8E58DABE8A7867C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+       
+       <key value="B4030356-977D-4258-A696-9739DB90F590"/>
+          <value type=".MapConfig">
+           <entry>
+              <key value="other"/>
+              <value type=".MapConfig">
+               <entry>
+                <key value="service-list"/>
+                <value type=".ListConfig">
+                  <item type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocateEntity">
+                    <net-name value="other"/>
+                    <cdn-id value="Sooner"/>
+                    <cdn-name value="赛维"/>
+                    <ch-code value="B4030356-977D-4258-A696-9739DB90F590"/>
+                    <ch-name value="正在直播"/>
+                    <url value="http://biz.vsdn.tv380.com/playlive.php?5B63686E5D445830303030303034327C313636327C317C313030307CE4B88AE8A786E5A496E8AFAD2846297C72746D707C666C765B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00|js"/>
+                    <percent type="int" value="1"/>
+                  </item>
+                </value>
+                </entry>
+              </value>
+           </entry>
+       </value>
+
+     </entry>
+   </config>
+
+
+</config>

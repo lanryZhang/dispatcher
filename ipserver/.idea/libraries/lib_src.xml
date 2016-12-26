@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib-src">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib-src/apache-mina-2.0.4-src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/lib-src/commons-io-2.0.1-src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

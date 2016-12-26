@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!--DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"-->
+	<hibernate-configuration>
+	     <session-factory>
+	          <!-- *** Derby Connection *** -->
+	          <property name="dialect">org.hibernate.dialect.DerbyDialect</property>
+	          <property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+	          <property name="connection.url">jdbc:derby:testdb;create=true;</property>
+	          <property name="connection.username">testdb</property>
+	          <property name="connection.password">testdb</property>
+
+            <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+	          <!-- Apache DBCP Connection Pool -->
+	          <!-- connection pool -->
+	          <!-- The maximum number of active connections that can be allocated
+       from this pool at the same time, or zero for no limit. -->
+	          <property name="hibernate.dbcp.maxActive">20</property>
+	          <!-- Action to take in case of an exhausted DBCP connection pool
+       (0 = fail, 1 = block, 2= grow) -->
+	          <property name="hibernate.dbcp.whenExhaustedAction">1</property>
+	          <!--  The maximum number of milliseconds that the pool will wait
+       (when there are no available connections) for a connection
+       to be returned before throwing an exception, or -1 to wait indefinitely. -->
+	          <property name="hibernate.dbcp.maxWait">3000</property>
+	          <!--  The maximum number of active connections that can remain idle
+        in the pool, without extra ones being released, or zero for no limit. -->
+	          <property name="hibernate.dbcp.maxIdle">10</property>
+	          <!-- the amount of time (in milliseconds) to sleep between examining idle
+       objects for eviction -->
+	          <property name="hibernate.dbcp.timeBetweenEvictionRunsMillis">360000</property>
+	          <!-- the number of idle objects to examine per run within the idle object
+       eviction thread (if any) -->
+	          <property name="hibernate.dbcp.numTestsPerEvictionRun">10</property>
+	          <!-- the minimum number of milliseconds an object can sit idle in the pool
+       before it is eligable for eviction -->
+	          <property name="hibernate.dbcp.minEvictableIdleTimeMillis">3600000</property>
+	          <!--  The indication of whether objects will be validated by the idle object
+        evictor (if any). If an object fails to validate, it will be dropped
+        from the pool. -->
+	          <property name="hibernate.dbcp.testWhileIdle">false</property>
+	          <!-- The SQL query that will be used to validate connections from this pool
+       before returning them to the caller. If specified, this query MUST be
+       an SQL SELECT statement that returns at least one row. -->
+	          <property name="hibernate.dbcp.validationQuery">select 1 from dual</property>
+	          <!-- The indication of whether objects will be validated before being borrowed
+       from the pool. If the object fails to validate, it will be dropped from
+       the pool, and we will attempt to borrow another. -->
+	          <property name="hibernate.dbcp.testOnBorrow">false</property>
+	          <!-- The indication of whether objects will be validated before being returned
+       to the pool. -->
+	          <property name="hibernate.dbcp.testOnReturn">false</property>
+	          <!-- prepared statement cache -->
+	          <property name="hibernate.dbcp.ps.maxActive">20</property>
+	          <property name="hibernate.dbcp.ps.whenExhaustedAction">1</property>
+	          <property name="hibernate.dbcp.ps.maxWait">3000</property>
+	          <property name="hibernate.dbcp.ps.maxIdle">10</property>
+	          <property name="hibernate.dbcp.ps.timeBetweenEvictionRunsMillis">360000</property>
+	          <property name="hibernate.dbcp.ps.numTestsPerEvictionRun">10</property>
+	          <property name="hibernate.dbcp.ps.minEvictableIdleTimeMillis">3600000</property>
+	          <property name="hibernate.dbcp.ps.testWhileIdle">false</property>
+	          <property name="hibernate.dbcp.ps.validationQuery">select 1 from dual</property>
+	          <property name="hibernate.dbcp.ps.testOnBorrow">false</property>
+	          <property name="hibernate.dbcp.ps.testOnReturn">false</property>
+
+	          <!--  Default Hibernate Connection Pool -->
+	          <property name="hibernate.connection.pool.size">20</property>
+
+	          <property name="hibernate.c3p0.max_size">20</property>
+	          <property name="hibernate.c3p0.min_size">2</property>
+	          <property name="hibernate.c3p0.timeout">5000</property>
+	          <property name="hibernate.c3p0.max_statements">100</property>
+	          <property name="hibernate.c3p0.idle_test_period">3000</property>
+	          <property name="hibernate.c3p0.acquire_increment">2</property>
+	          <property name="hibernate.c3p0.validate">false</property>
+
+	          <!-- Miscellaneous Settings -->
+	          <property name="hibernate.show_sql">false</property>
+	          <property name="jdbc.fetch_size">50</property>
+	          <property name="jdbc.batch_size">25</property>
+	          <property name="hibernate.cglib.use_reflection_optimizer">true</property>
+
+	          <!-- Query Language -->
+	          <property name="hibernate.query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+
+	     </session-factory>
+
+	</hibernate-configuration>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<config name="ratePlugin" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+		<min-percent type="int" value="80"/>
+		<max-percent type="int" value="90"/>
+		<outof-percent type="int" value="30"/>
+	</config>
+	<config name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+		<min-percent type="int" value="100"/>
+		<max-percent type="int" value="10000"/>
+		<outof-percent type="int" value="100"/>
+	</config>
+</config>

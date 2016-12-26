@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<config name="areaPlugin" type="com.ifeng.ipserver.service.impl.node.plugin.AreaPlugin">
+		<area-map type=".MapConfig">
+			<entry>
+				<key value="中国电信北京市"/>
+				<value value=""/>
+			</entry>
+			<entry>
+				<key value="中国电信天津市"/>
+				<value value=""/>
+			</entry>
+		</area-map>
+	</config>
+</config>

@@ -1,0 +1,54 @@
+[12 09:50:27,035 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 09:50:27,237 ERROR] [main] plugin.live.LiveAllocatePlugin - update liveconfig file errorError loading config file file:D:/conf/liveAllocateConfig.xmlD:\conf\liveAllocateConfig.xml (系统找不到指定的路径。)
+[12 09:50:27,375 INFO ] [main] service.listener.AbstractTimeStampListener - Cann't get timestamp file ,maybe this's the first running, so will create a new one.
+java.io.FileNotFoundException: e:\workspace\ipserver3\conf\version.txt (系统找不到指定的路径。)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileReader.<init>(FileReader.java:55)
+	at com.ifeng.common.misc.FileTools.getInputStream(FileTools.java:151)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.getLastModifyTime(AbstractTimeStampListener.java:70)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:129)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 09:50:27,402 ERROR] [main] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:131)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 09:50:27,403 ERROR] [main] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:131)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 09:50:27,407 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 09:50:27,409 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 09:50:27,434 INFO ] [main] ipserver.server.Server - Server now listening on port 80
+[12 09:50:27,434 INFO ] [main] ipserver.server.Server - Infomation Loading Finished
+[12 09:50:30,540 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException

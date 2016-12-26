@@ -1,0 +1,40 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/common-lib" />
+      <root url="file://$PROJECT_DIR$/lib/json" />
+      <root url="jar://$PROJECT_DIR$/lib/apache-mime4j-0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/c3p0-0.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/derby.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpmime-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/icommon.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ipserver.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-junit3-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-legacy-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsontools-core-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mina-core-2.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mina-integration-beans-2.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xom-1.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/json" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-junit3-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock-legacy-2.5.1.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/common-lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/json" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/json" recursive="false" type="SOURCES" />
+  </library>
+</component>

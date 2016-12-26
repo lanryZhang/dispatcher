@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	
+	<config name="dataPrinter" type="com.ifeng.ipserver.conf.plugin.DataPrinterPlugin">
+		<print-list-key value="testlist"/>
+		<print-file-path-key value="printFile"/>
+		<separator value=","/>
+	</config>
+</config>

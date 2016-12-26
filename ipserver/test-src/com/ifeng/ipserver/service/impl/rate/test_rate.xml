@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<config name="rateCalculator" type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+		<interval type="int" value="60"/>
+		<period type="int" value="1000"/>
+	</config>
+</config>

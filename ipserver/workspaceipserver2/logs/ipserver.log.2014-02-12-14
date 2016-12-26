@@ -1,0 +1,27 @@
+[12 14:51:09,404 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:09,580 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 14:51:09,714 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 14:51:09,717 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 14:51:09,721 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 14:51:13,004 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:17,886 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:22,760 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:27,823 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:32,862 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:37,597 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:42,665 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:47,910 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:52,713 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:51:57,620 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:07,986 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:08,123 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 14:52:08,200 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 14:52:08,203 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 14:52:08,206 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 14:52:12,862 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:17,778 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:23,035 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:27,688 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:32,790 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:37,622 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 14:52:42,889 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException

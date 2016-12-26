@@ -1,0 +1,97 @@
+
+<!--示例文件  非线上版本-->
+<config>
+	    <!-- 阀值配置-->
+		<config name="rateLimitPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+		<or-plugin name="ratePlugin95" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="85"/>
+				<max-percent type="int" value="90"/>
+				<outof-percent type="int" value="2"/>
+			</or-plugin>
+		<or-plugin name="ratePlugin95" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="90"/>
+				<max-percent type="int" value="95"/>
+				<outof-percent type="int" value="15"/>
+			</or-plugin>
+			<or-plugin name="ratePlugin96" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="95"/>
+				<max-percent type="int" value="98"/>
+				<outof-percent type="int" value="25"/>
+			</or-plugin>
+			<or-plugin name="ratePlugin98" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="98"/>
+				<max-percent type="int" value="100"/>
+				<outof-percent type="int" value="30"/>
+			</or-plugin>
+			<or-plugin name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="100"/>
+				<max-percent type="int" value="1000000000"/>
+				<outof-percent type="int" value="100"/>
+			</or-plugin>
+	</config>
+<!--带宽更新 从给定地址获取带宽后 存到到本地map结构中-->
+  <config name="bandWidthMap" type=".MapConfig">
+   </config>
+  <config type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthUpdate">
+      <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+      <conn-timeout type="int" value="5000"/>
+      <read-timeout type="int" value="5000"/>
+      <type value="OUT"/>
+      <period type="int" value="5000" />  
+      <url value="http://m.ifengidc.com/api/network/networkapi.txt"/>  
+    </config>
+	
+
+		 <!-- VDN节点配置 需要配置的VDN 一般是要限速  或者需要二级调度 或者两者皆有的-->	
+  <config name="dynamicnodeMap" type=".MapConfig">
+
+      <entry>
+         <key value="221.181.39.161"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+						<interval type="int" value="60"/>  <!-- 平均观看时长-->
+						<period type="int" value="1000"/>  <!--返回当前1秒的平均tps-->
+			</rate-calculator>
+			<bak-ipOrCname value="video19.ifeng.com"/>  <!-- 商业VDN地址-->
+			<ipOrCname value="221.181.39.161"/>    <!--落到当前VDN需要返回的实际ip 一般跟节点ip 是一样的-->
+			<max-bandwidth type="long" value="20000000"/>  <!-- 带宽限制最大值-->
+			<min-rate-percent type="int" value="85"/>   <!-- 启动带宽限制的最大值-->
+			<plugin type="com.ifeng.common.plugin.process.AndSuite">
+				<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+			</plugin>
+			
+			<!--二级调度配置  vdn节点如果有多个服务器 可以添加这个配置 将请求按比例分到各个节点-->
+			<ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="221.181.39.161"/>
+                        </or-plugin>
+                <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="66"/>
+                                <ip  value="221.181.39.162"/>
+                        </or-plugin>
+                <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="66"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="221.181.39.163"/>
+                        </or-plugin>                   
+              </ip-plugin>			
+			<period type="int" value="600000"/> <!--limitedRate更新周期-->
+			<!-- 获取节点带宽-->
+			 <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+                        <bandwidth-map  type=".ReferenceConfig" reference="bandWidthMap" />
+                         <key  value="清流汛-石家庄"/>
+             </bandwidth-getter>
+   	 	</value>
+     </entry>
+	 
+
+	 
+	 
+   </config>
+   
+   
+   
+</config>

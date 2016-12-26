@@ -1,0 +1,735 @@
+<config>
+  <config name="rateLimitLivePlugin" type="com.ifeng.common.plugin.process.OrSuite">
+    <or-plugin name="ratePlugin92" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="80"/>
+      <max-percent type="int" value="85"/>
+      <outof-percent type="int" value="45"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin94" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="85"/>
+      <max-percent type="int" value="90"/>
+      <outof-percent type="int" value="55"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin96" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="90"/>
+      <max-percent type="int" value="95"/>
+      <outof-percent type="int" value="65"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin98" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="95"/>
+      <max-percent type="int" value="100"/>
+      <outof-percent type="int" value="75"/>
+    </or-plugin>
+    <or-plugin name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="100"/>
+      <max-percent type="int" value="1000000000"/>
+      <outof-percent type="int" value="100"/>
+    </or-plugin>
+  </config>
+  <config name="cctvCdnUrlPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+    <or-plugin name="p2" type="com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin">
+      <url value="http://livews.ifeng.com/live/CCTV.flv"/>
+      <min-percent type="int" value="0"/>
+      <max-percent type="int" value="100"/>
+      <back-cdnid value="chinanetcenter"/>
+    </or-plugin>
+  </config>
+  <config name="fhzbCdnUrlPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+    <or-plugin name="p2" type="com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin">
+      <url value="http://livews.ifeng.com/live/FHZB.flv"/>
+      <min-percent type="int" value="0"/>
+      <max-percent type="int" value="100"/>
+      <back-cdnid value="chinanetcenter"/>
+    </or-plugin>
+  </config>
+  <config name="fhzxCdnUrlPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+    <or-plugin name="p2" type="com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin">
+      <url value="http://livews.ifeng.com/live/FHZX.flv"/>
+      <min-percent type="int" value="0"/>
+      <max-percent type="int" value="100"/>
+      <back-cdnid value="chinanetcenter"/>
+    </or-plugin>
+  </config>
+  <config name="channelMap" type=".MapConfig"/>
+  <config name="liveBandMap" type=".MapConfig"/>
+  <config name="liveBandwidthUpdate" type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthUpdate">
+    <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+    <conn-timeout type="int" value="5000"/>
+    <read-timeout type="int" value="5000"/>
+    <typeValue value="OUT"/>
+    <period type="int" value="5000"/>
+    <url value="http://m.ifengidc.com/api/network/networkapi.txt"/>
+  </config>
+  <config name="liveGroupMap" type=".MapConfig"/>
+  <config name="liveNodeMap" type=".MapConfig">
+    <entry>
+      <key value="111.13.58.28"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="180"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://111.13.58.28:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="3500000"/>
+        <min-rate-percent type="int" value="80"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="34"/>
+            <ip value="http://111.13.58.28:80"/>
+          </or-plugin>
+          <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="34"/>
+            <max-percent type="int" value="67"/>
+            <ip value="http://111.13.58.29:80"/>
+          </or-plugin>
+          <or-plugin name="default3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="67"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://221.179.181.100:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="北京移动（北蜂窝）PC直播业务"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="119.167.138.13"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="180"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://119.167.138.13:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="7000000"/>
+        <min-rate-percent type="int" value="80"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://119.167.138.13:80"/>
+          </or-plugin>
+          <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://119.167.138.14:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="青岛联通PC直播业务"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="119.167.138.6"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://119.167.138.6:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://119.167.138.6:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://119.167.138.7:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="75"/>
+            <ip value="http://119.167.138.8:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://119.167.138.9:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="青岛联通出口10G"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="123.151.185.102"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://123.151.185.102:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="20"/>
+            <ip value="http://123.151.185.102:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="20"/>
+            <max-percent type="int" value="40"/>
+            <ip value="http://123.151.185.103:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="40"/>
+            <max-percent type="int" value="60"/>
+            <ip value="http://123.151.185.104:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="60"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://123.151.185.106:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="北京-鹏博士-天津电信"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="125.39.142.83"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://125.39.142.83:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://125.39.142.83:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://125.39.142.84:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="75"/>
+            <ip value="http://125.39.142.85:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://125.39.142.86:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="北京-鹏博士-天津联通"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="125.64.133.71"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://125.64.133.71:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="5800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://125.64.133.71:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://125.64.133.72:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="75"/>
+            <ip value="http://125.64.133.73:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://125.64.133.74:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="宜宾电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="14.17.115.7"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://14.17.115.7:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://14.17.115.7:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://14.17.115.8:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://14.17.115.9:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="中山电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="153.3.230.16"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://153.3.230.16:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="14"/>
+            <ip value="http://153.3.230.16:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="14"/>
+            <max-percent type="int" value="28"/>
+            <ip value="http://153.3.230.17:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="28"/>
+            <max-percent type="int" value="42"/>
+            <ip value="http://153.3.230.18:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="42"/>
+            <max-percent type="int" value="56"/>
+            <ip value="http://153.3.230.19:80"/>
+          </or-plugin>
+          <or-plugin name="exit5" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="56"/>
+            <max-percent type="int" value="70"/>
+            <ip value="http://153.3.230.20:80"/>
+          </or-plugin>
+          <or-plugin name="exit6" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="70"/>
+            <max-percent type="int" value="85"/>
+            <ip value="http://153.3.230.21:80"/>
+          </or-plugin>
+          <or-plugin name="exit7" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="85"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://153.3.230.22:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="南京联通出口"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="220.170.181.158"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://220.170.181.158:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="4000000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="20"/>
+            <ip value="http://220.170.181.158:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="20"/>
+            <max-percent type="int" value="40"/>
+            <ip value="http://220.170.181.159:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="40"/>
+            <max-percent type="int" value="60"/>
+            <ip value="http://220.170.181.160:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="60"/>
+            <max-percent type="int" value="80"/>
+            <ip value="http://220.170.181.161:80"/>
+          </or-plugin>
+          <or-plugin name="exit5" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="80"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://220.170.181.162:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="长沙电信"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="221.204.238.246"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://221.204.238.246:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="7800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://221.204.238.246:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://221.204.238.247:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="75"/>
+            <ip value="http://221.204.238.248:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://221.204.238.249:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="山西联通"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="60.174.235.71"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://60.174.235.71:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="25"/>
+            <ip value="http://60.174.235.71:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="25"/>
+            <max-percent type="int" value="50"/>
+            <ip value="http://60.174.235.72:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="75"/>
+            <ip value="http://60.174.235.73:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://60.174.235.74:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="合肥电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="61.155.167.11"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://61.155.167.11:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="29800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="11" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="12"/>
+            <ip value="http://61.155.167.11:80"/>
+          </or-plugin>
+          <or-plugin name="12" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="12"/>
+            <max-percent type="int" value="24"/>
+            <ip value="http://61.155.167.12:80"/>
+          </or-plugin>
+          <or-plugin name="13" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="24"/>
+            <max-percent type="int" value="36"/>
+            <ip value="http://61.155.167.13:80"/>
+          </or-plugin>
+          <or-plugin name="14" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="36"/>
+            <max-percent type="int" value="48"/>
+            <ip value="http://61.155.167.14:80"/>
+          </or-plugin>
+          <or-plugin name="15" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="48"/>
+            <max-percent type="int" value="61"/>
+            <ip value="http://61.155.167.15:80"/>
+          </or-plugin>
+          <or-plugin name="17" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="61"/>
+            <max-percent type="int" value="74"/>
+            <ip value="http://61.155.167.17:80"/>
+          </or-plugin>
+          <or-plugin name="18" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="74"/>
+            <max-percent type="int" value="87"/>
+            <ip value="http://61.155.167.18:80"/>
+          </or-plugin>
+          <or-plugin name="19" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="87"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://61.155.167.19:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="苏州电信出口流量汇总"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="61.163.113.231"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://61.163.113.231:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="5900000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="exit1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="16"/>
+            <ip value="http://61.163.113.231:80"/>
+          </or-plugin>
+          <or-plugin name="exit2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="16"/>
+            <max-percent type="int" value="32"/>
+            <ip value="http://61.163.113.232:80"/>
+          </or-plugin>
+          <or-plugin name="exit3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="32"/>
+            <max-percent type="int" value="49"/>
+            <ip value="http://61.163.113.233:80"/>
+          </or-plugin>
+          <or-plugin name="exit4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="49"/>
+            <max-percent type="int" value="66"/>
+            <ip value="http://61.163.113.234:80"/>
+          </or-plugin>
+          <or-plugin name="exit5" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="66"/>
+            <max-percent type="int" value="83"/>
+            <ip value="http://61.163.113.235:80"/>
+          </or-plugin>
+          <or-plugin name="exit6" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="83"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://61.163.113.236:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="新乡联通出口"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="default"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicLiveNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="180"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <back-url-map type=".ReferenceConfig" reference="channelMap"/>
+        <back-cndid value="chinanetcenter"/>
+        <cndid value="ifengP2P"/>
+        <url value="http://61.155.167.11:80"/>
+        <key value="false"/>
+        <max-bandwidth type="long" value="25000000"/>
+        <min-rate-percent type="int" value="85"/>
+        <url-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="35"/>
+            <ip value="http://61.155.167.11:80"/>
+          </or-plugin>
+          <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="35"/>
+            <max-percent type="int" value="70"/>
+            <ip value="http://61.155.167.12:80"/>
+          </or-plugin>
+          <or-plugin name="default3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="75"/>
+            <max-percent type="int" value="100"/>
+            <ip value="http://61.155.167.13:80"/>
+          </or-plugin>
+        </url-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitLivePlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="liveBandMap"/>
+          <key value="电信PC直播流量汇总"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+  </config>
+</config>

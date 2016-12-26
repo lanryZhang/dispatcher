@@ -1,0 +1,33 @@
+<config>
+    <!-- 根据域名 设定不同来源的视频 带宽的限制阀值不同 同时也可以设置跳转的方式为301还是302  不限制带宽的情况下 可以设置一个比较大的值 如10000-->
+    <config name="requestHostMap" type=".MapConfig">
+        <entry>
+            <key value="wideo.ifeng.com"/>
+            <value type="com.ifeng.ipserver.server.handler.plugin.redirect.RequestHost">
+                <http-status  type="int" value="302"/>
+                <threshold type="int" value="98"/>
+            </value>
+        </entry>
+         <entry>
+            <key value="3gs.ifeng.com"/>
+            <value type="com.ifeng.ipserver.server.handler.plugin.redirect.RequestHost">
+                <http-status  type="int" value="301"/>
+                <threshold type="int" value="10000"/>
+            </value>
+        </entry>
+         <entry>
+            <key value="3gs2.ifeng.com"/>
+            <value type="com.ifeng.ipserver.server.handler.plugin.redirect.RequestHost">
+                <http-status  type="int" value="301"/>
+                <threshold type="int" value="10000"/>
+            </value>
+        </entry>
+         <entry>
+            <key value="other"/>
+            <value type="com.ifeng.ipserver.server.handler.plugin.redirect.RequestHost">
+                <http-status  type="int" value="302"/>
+                <threshold type="int" value="85"/>
+            </value>
+        </entry>      
+    </config>  
+</config>

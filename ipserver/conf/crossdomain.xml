@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<!-- http://www.aeroflash.org/crossdomain.xml -->
+
+<cross-domain-policy>
+
+  <allow-access-from domain="*.ifeng.com" />
+  <allow-access-from domain="*.ifengimg.com" />
+</cross-domain-policy>

@@ -1,0 +1,491 @@
+[12 11:06:51,551 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:06:51,678 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 11:06:51,741 ERROR] [main] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:06:51,742 ERROR] [main] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:06:51,743 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 11:06:51,745 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 11:06:51,748 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 11:06:51,753 INFO ] [main] ipserver.server.Server - Server now listening on port 80
+[12 11:06:51,753 INFO ] [main] ipserver.server.Server - Infomation Loading Finished
+[12 11:06:56,487 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:01,139 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:06,251 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:11,135 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:16,372 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:21,196 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:35,208 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:35,303 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 11:07:35,356 ERROR] [main] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:07:35,356 ERROR] [main] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:07:35,357 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 11:07:35,359 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 11:07:35,363 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 11:07:35,367 INFO ] [main] ipserver.server.Server - Server now listening on port 80
+[12 11:07:35,367 INFO ] [main] ipserver.server.Server - Infomation Loading Finished
+[12 11:07:40,261 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:45,326 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:50,256 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:55,313 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:07:59,983 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:05,254 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:10,116 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:15,165 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:20,249 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:25,049 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:30,263 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:35,045 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:35,359 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:08:35,359 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:08:40,336 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:45,193 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:50,252 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:08:55,217 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:00,252 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:05,235 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:10,168 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:15,073 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:20,063 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:25,214 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:30,142 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:35,106 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:35,228 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:09:35,228 WARN ] [updateBandwidthTimer] impl.node.DynamicNode - limited rate is unlimited ,because nowBandwidth is 0 or now rate is 0
+[12 11:09:35,228 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0 limited updated
+[12 11:09:35,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:09:35,229 WARN ] [updateBandwidthTimer] impl.node.DynamicNode - limited rate is unlimited ,because nowBandwidth is 0 or now rate is 0
+[12 11:09:35,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0 limited updated
+[12 11:09:35,362 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:09:35,363 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:09:40,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:09:40,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:09:40,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:09:40,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:09:40,279 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:45,086 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:45,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:09:45,229 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:09:45,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:09:45,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:09:50,149 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:50,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:09:50,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:09:50,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:09:50,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:09:55,110 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:09:55,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:09:55,230 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:09:55,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:09:55,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:10:00,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:10:00,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:10:00,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:10:00,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:10:00,341 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:05,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:10:05,231 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:10:05,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:10:05,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:10:05,289 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:10,186 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:10,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:10:10,232 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:10:10,233 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:10:10,233 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:10:22,410 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:22,503 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 11:10:22,554 ERROR] [main] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:10:22,554 ERROR] [main] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.config(AbstractTimeStampListener.java:133)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.config(HttpFileTimeStampListener.java:77)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:73)
+[12 11:10:22,555 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 11:10:22,557 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 11:10:22,562 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 11:10:22,566 INFO ] [main] ipserver.server.Server - Server now listening on port 80
+[12 11:10:22,566 INFO ] [main] ipserver.server.Server - Infomation Loading Finished
+[12 11:10:27,454 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:32,543 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:37,393 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:42,525 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:47,346 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:52,410 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:10:57,406 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:02,507 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:07,455 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:12,358 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:17,444 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:22,361 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:22,557 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:11:22,557 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:11:27,436 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:32,393 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:37,392 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:42,460 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:47,394 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:52,324 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:11:57,370 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:02,378 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:07,374 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:13,039 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:17,389 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:22,429 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:22,429 WARN ] [updateBandwidthTimer] impl.node.DynamicNode - limited rate is unlimited ,because nowBandwidth is 0 or now rate is 0
+[12 11:12:22,429 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0 limited updated
+[12 11:12:22,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:22,430 WARN ] [updateBandwidthTimer] impl.node.DynamicNode - limited rate is unlimited ,because nowBandwidth is 0 or now rate is 0
+[12 11:12:22,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0 limited updated
+[12 11:12:22,502 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:22,559 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:12:22,560 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:12:27,412 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:27,429 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:27,429 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:27,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:27,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:32,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:32,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:32,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:32,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:32,550 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:37,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:37,430 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:37,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:37,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:37,795 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:42,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:42,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:42,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:42,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:42,707 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:47,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:47,431 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:47,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:47,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:47,524 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:52,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:52,432 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:52,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:52,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:52,665 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:12:57,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:12:57,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:12:57,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:12:57,433 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:12:57,434 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:02,312 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:02,435 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:02,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:02,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:02,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:07,435 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:07,435 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:07,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:07,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:07,555 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:12,435 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:12,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:12,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:12,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:12,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:17,420 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:17,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:17,436 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:17,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:17,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:22,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:22,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:22,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:22,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:22,564 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:13:22,564 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:13:22,567 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:27,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:27,437 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:27,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:27,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:27,448 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:32,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:32,438 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:32,439 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:32,439 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:32,538 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:37,440 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:37,440 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:37,440 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:37,440 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:37,488 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:42,419 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:42,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:42,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:42,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:42,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:47,358 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:47,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:47,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:47,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:47,441 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:52,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:52,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:52,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:52,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:52,555 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:13:57,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:13:57,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:13:57,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:13:57,442 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:13:57,591 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:02,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:02,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:02,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:02,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:02,598 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:07,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:07,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:07,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:07,443 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:07,635 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:12,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:12,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:12,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:12,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:12,627 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:17,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:17,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:17,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:17,444 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:17,481 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:22,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:22,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:22,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:22,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:22,566 ERROR] [updateTimer] ipserver.tools.HttpTools - Got Exception When Download 
+java.io.IOException: Can't get connection. The http response code is 404
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:44)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:14:22,566 ERROR] [updateTimer] service.listener.HttpFileTimeStampListener - Cann't get url for:http://210.51.19.82/iNMS2/ipserver/version
+java.io.IOException: Can't get connection,over tyr.The Url is :http://210.51.19.82/iNMS2/ipserver/version
+	at com.ifeng.ipserver.tools.HttpTools.downLoad(HttpTools.java:89)
+	at com.ifeng.ipserver.service.listener.HttpFileTimeStampListener.getModifyTime(HttpFileTimeStampListener.java:62)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.init(AbstractTimeStampListener.java:57)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener.access$0(AbstractTimeStampListener.java:56)
+	at com.ifeng.ipserver.service.listener.AbstractTimeStampListener$UpdateTask.run(AbstractTimeStampListener.java:141)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[12 11:14:22,576 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:27,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:27,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:27,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:27,445 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:27,480 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:32,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:32,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:32,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:32,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:32,612 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:37,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:37,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:37,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:37,446 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:37,557 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:42,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:42,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:42,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:42,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:42,481 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:47,418 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:47,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:47,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:47,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:47,447 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:52,306 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:14:52,448 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:52,448 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:52,449 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:52,449 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:57,448 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.134 bandwidth is 0kb/s
+[12 11:14:57,448 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.134 limitedRate is -1 percent is 0
+[12 11:14:57,449 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - The node 113.140.42.133 bandwidth is 0kb/s
+[12 11:14:57,449 INFO ] [updateBandwidthTimer] impl.node.DynamicNode - node:113.140.42.133 limitedRate is -1 percent is 0
+[12 11:14:57,510 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:21,295 ERROR] [main] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:21,394 INFO ] [main] plugin.live.LiveAllocatePlugin - init liveconfig file success
+[12 11:29:21,447 INFO ] [main] listener.plugin.AreaNodeUpdaterPlugin - Set a new map,size is 4
+[12 11:29:21,449 INFO ] [main] listener.plugin.IpRangeUpdaterPlugin - Set a new rangeSet,size is 10
+[12 11:29:21,453 INFO ] [main] service.listener.FileUpdateListener - Init the dynamicnode file lastModifyTime:1391838901284
+[12 11:29:21,461 INFO ] [main] ipserver.server.Server - Server now listening on port 80
+[12 11:29:21,461 INFO ] [main] ipserver.server.Server - Infomation Loading Finished
+[12 11:29:26,640 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:31,372 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:36,323 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:41,317 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:46,510 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:51,291 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:29:56,482 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:30:01,285 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException
+[12 11:30:06,275 ERROR] [bandwidthUpdate] node.bandwidth.BandwidthUpdate - get bandwidth errorjava.lang.NoClassDefFoundError: org/apache/commons/lang/exception/NestableRuntimeException

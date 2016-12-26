@@ -1,0 +1,1026 @@
+<config>
+	<config name="rateLimitPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+			<or-plugin name="ratePlugin92" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="92"/>
+				<max-percent type="int" value="94"/>
+				<outof-percent type="int" value="1"/>
+			</or-plugin>
+			<or-plugin name="ratePlugin94" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="94"/>
+				<max-percent type="int" value="96"/>
+				<outof-percent type="int" value="3"/>
+			</or-plugin>
+			<or-plugin name="ratePlugin96" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="96"/>
+				<max-percent type="int" value="98"/>
+				<outof-percent type="int" value="5"/>
+			</or-plugin>
+			<or-plugin name="ratePlugin98" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="98"/>
+				<max-percent type="int" value="100"/>
+				<outof-percent type="int" value="7"/>
+			</or-plugin>
+			<or-plugin name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+				<min-percent type="int" value="100"/>
+				<max-percent type="int" value="1000000000"/>
+				<outof-percent type="int" value="100"/>
+			</or-plugin>
+	</config>
+			
+  <config name="dynamicnodeMap" type=".MapConfig">
+    <!--陕西宝鸡 -->
+     <entry>
+         <key value="113.140.42.133"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+			<interval type="int" value="60"/>
+			<period type="int" value="1000"/>
+		</rate-calculator>
+		<bak-ipOrCname value="video09.ifeng.com"/>
+		<ipOrCname value="113.140.42.133"/>
+		<max-bandwidth type="int" value="2600000"/>
+		<min-rate-percent type="int" value="92"/>
+		<plugin type="com.ifeng.common.plugin.process.AndSuite">
+			<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+		</plugin>
+                <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+     			<or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+               			<min-percent type="int" value="0"/>
+               			<max-percent type="int" value="34"/>
+              			 <ip  value="113.140.42.133"/>
+        		</or-plugin>
+     			<or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+               			<min-percent type="int" value="34"/>
+               			<max-percent type="int" value="67"/>
+               			<ip  value="113.140.42.134"/>
+        		</or-plugin> 
+        		<or-plugin name="default3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+               			<min-percent type="int" value="67"/>
+               			<max-percent type="int" value="100"/>
+               			<ip  value="113.140.42.135"/>
+        		</or-plugin>                                 
+    		</ip-plugin>
+		 <period type="int" value="5000"/>
+		<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+			<url value="http://223.203.209.250:8090/ifeng/113.140.42.158_50.html"/>
+			<conn-timeout type="java.lang.Integer" value="5000"/>
+			<read-timeout type="java.lang.Integer" value="10000"/>
+		</bandwidth-getter>
+   	 </value>
+     </entry>
+    <!--济南节点-->
+     <entry>
+         <key value="119.188.27.130"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+			<interval type="int" value="60"/>
+			<period type="int" value="1000"/>
+		</rate-calculator>
+		<bak-ipOrCname value="video09.ifeng.com"/>
+		<ipOrCname value="119.188.27.130"/>
+		<max-bandwidth type="int" value="3900000"/>
+		<min-rate-percent type="int" value="92"/>
+		<plugin type="com.ifeng.common.plugin.process.AndSuite">
+			<and-plugin type="com.ifeng.ipserver.service.impl.node.plugin.AreaPlugin">
+				<area-map type=".MapConfig">
+					<entry>
+						<key value="联通北京"/>
+						<value value=""/>
+					</entry>
+				</area-map>
+			</and-plugin>
+			<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+		</plugin>
+                 
+                   <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                    <or-plugin name="default130" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="119.188.27.130"/>
+                     </or-plugin>
+                    
+                     <or-plugin name="default54" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="100"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="119.188.2.55"/>
+                     </or-plugin>
+                      
+                 </ip-plugin>
+                
+		 <period type="int" value="5000"/>
+		<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+			<url value="http://223.203.209.250:8090/ifeng/119.188.27.142_53.html"/>
+			<conn-timeout type="java.lang.Integer" value="5000"/>
+			<read-timeout type="java.lang.Integer" value="10000"/>
+		</bandwidth-getter>
+   	 </value>
+     </entry>
+     <!--石家庄节点 -->
+     <entry>
+         <key value="61.182.131.130"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                        <interval type="int" value="60"/>
+                        <period type="int" value="1000"/>
+                </rate-calculator>
+                <bak-ipOrCname value="video09.ifeng.com"/>
+                <ipOrCname value="61.182.131.130"/>
+                <max-bandwidth type="int" value="5900000"/>
+                <min-rate-percent type="int" value="92"/>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                        <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                </plugin>
+                <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="61.182.131.137"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="66"/>
+                                <ip  value="61.182.131.138"/>
+                   </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="66"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="61.182.131.139"/>
+                   </or-plugin>
+                 </ip-plugin> 
+                 <period type="int" value="5000"/>
+                <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                        <url value="http://223.203.209.250:8090/ifeng/61.182.131.158_50.html"/>
+                        <conn-timeout type="java.lang.Integer" value="5000"/>
+                        <read-timeout type="java.lang.Integer" value="10000"/>
+                </bandwidth-getter>
+         </value>
+     </entry>
+     <!--汕头节点 -->
+     <entry>
+         <key value="119.147.244.78"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                        <interval type="int" value="60"/>
+                        <period type="int" value="1000"/>
+                </rate-calculator>
+                <bak-ipOrCname value="video09.ifeng.com"/>
+                <ipOrCname value="119.147.244.78"/>
+                <max-bandwidth type="int" value="9900000"/>
+                <min-rate-percent type="int" value="92"/>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                        <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                </plugin>
+                 <period type="int" value="5000"/>
+                <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                        <url value="http://223.203.209.250:8090/ifeng/119.147.244.65_54.html"/>
+                        <conn-timeout type="java.lang.Integer" value="5000"/>
+                        <read-timeout type="java.lang.Integer" value="10000"/>
+                </bandwidth-getter>
+         </value>
+     </entry>
+     <!--郑州节点--> 
+       <entry>
+         <key value="182.118.23.20"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                        <interval type="int" value="60"/>
+                        <period type="int" value="1000"/>
+                </rate-calculator>
+                <bak-ipOrCname value="119.188.27.130"/>
+                <ipOrCname value="182.118.23.20"/>
+                <max-bandwidth type="int" value="3900000"/>
+                <min-rate-percent type="int" value="92"/>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                        <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                </plugin>
+                <!--
+                <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                    <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="182.118.23.5"/>
+                        </or-plugin>
+                     <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="66"/>
+                                <ip  value="182.118.23.6"/>
+                        </or-plugin>
+                     <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="66"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="182.118.23.7"/>
+                     </or-plugin>
+                     <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="60"/>
+                                <max-percent type="int" value="80"/>
+                                <ip  value="182.118.23.8"/>
+                     </or-plugin>
+                     <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="80"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="182.118.23.9"/>
+                     </or-plugin>
+                      
+                 </ip-plugin>
+                -->
+                 <period type="int" value="5000"/>
+                <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                        <url value="http://223.203.209.250:8090/ifeng/182.118.23.1_53.html"/>
+                        <conn-timeout type="java.lang.Integer" value="5000"/>
+                        <read-timeout type="java.lang.Integer" value="10000"/>
+                </bandwidth-getter>
+         </value>
+     </entry>
+
+      <!-- 上海铁通 -->
+        <entry>
+         <key value="122.72.121.70"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                        </rate-calculator>
+                        <bak-ipOrCname value="video09.ifeng.com"/>
+                        <ipOrCname value="122.72.121.70"/>
+                        <max-bandwidth type="int" value="9800000"/>
+                        <min-rate-percent type="int" value="90"/>
+                        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                                <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                        </plugin>
+                        <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="122.72.121.70"/>
+                        </or-plugin>
+                  <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="66"/>
+                                <ip  value="122.72.121.71"/>
+                   </or-plugin>
+                   <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="66"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="122.72.121.72"/>
+                   </or-plugin>
+              </ip-plugin>
+                        <period type="int" value="5000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/122.72.121.65_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+                </value>
+     </entry>
+    <!--天津网事达 -->
+      <entry>
+         <key value="125.39.31.146"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+				<interval type="int" value="60"/>
+				<period type="int" value="1000"/>
+			</rate-calculator>
+			<bak-ipOrCname value="video09.ifeng.com"/>
+			<ipOrCname value="125.39.31.146"/>
+			<max-bandwidth type="int" value="20000000"/>
+			<min-rate-percent type="int" value="90"/>
+			<plugin type="com.ifeng.common.plugin.process.AndSuite">
+				<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+			</plugin>
+			<ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="125.39.31.146"/>
+                        </or-plugin>
+                  <or-plugin name="default" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="125.39.31.147"/>
+                   </or-plugin>                     
+              </ip-plugin>			
+			<period type="int" value="600000"/>
+			<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+				<url value="http://119.188.2.23:8090/mrtg_qlx/119.188.27.142_53.html"/>
+				<conn-timeout type="java.lang.Integer" value="5000"/>
+				<read-timeout type="java.lang.Integer" value="10000"/>
+			</bandwidth-getter>
+   	 	</value>
+     </entry>
+     <!--杭州华数 --> 
+     <entry>
+         <key value="218.108.149.34"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+				<interval type="int" value="60"/>
+				<period type="int" value="1000"/>
+			</rate-calculator>
+			<bak-ipOrCname value="video09.ifeng.com"/>
+			<ipOrCname value="218.108.149.34"/>
+			<max-bandwidth type="int" value="20000000"/>
+			<min-rate-percent type="int" value="90"/>
+			<plugin type="com.ifeng.common.plugin.process.AndSuite">
+				<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+			</plugin>
+			<ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="20"/>
+                                <ip  value="218.108.149.34"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="20"/>
+                                <max-percent type="int" value="40"/>
+                                <ip  value="218.108.149.35"/>
+                   </or-plugin> 
+                   <or-plugin name="default3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="40"/>
+                                <max-percent type="int" value="60"/>
+                                <ip  value="218.108.149.36"/>
+                        </or-plugin>
+                  <or-plugin name="default4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="60"/>
+                                <max-percent type="int" value="80"/>
+                                <ip  value="218.108.149.37"/>
+                   </or-plugin>               
+                   <or-plugin name="default5" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="80"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="218.108.149.38"/>
+                        </or-plugin>                                 
+              </ip-plugin>			
+			<period type="int" value="600000"/>
+			<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+				<url value="http://119.188.2.23:8090/mrtg_qlx/119.188.27.142_53.html"/>
+				<conn-timeout type="java.lang.Integer" value="5000"/>
+				<read-timeout type="java.lang.Integer" value="10000"/>
+			</bandwidth-getter>
+   	 	</value>
+     </entry>
+
+    
+          <!-- 深圳联通 -->   
+ <entry>
+         <key value="163.177.95.142"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+				<interval type="int" value="60"/>
+				<period type="int" value="1000"/>
+		</rate-calculator>
+		<bak-ipOrCname value="video09.ifeng.com"/>
+		<ipOrCname value="163.177.95.142"/>
+		<max-bandwidth type="int" value="5900000"/>
+		<min-rate-percent type="int" value="92"/>
+		<ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="16"/>
+                                <ip  value="163.177.95.142"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="16"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="163.177.95.143"/>
+                   </or-plugin>
+                  <or-plugin name="default3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="163.177.95.144"/>
+                   </or-plugin>
+                   <or-plugin name="default4" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="67"/>
+                                <ip  value="163.177.95.145"/>
+                        </or-plugin>
+                  <or-plugin name="default5" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="67"/>
+                                <max-percent type="int" value="84"/>
+                                <ip  value="163.177.95.146"/>
+                   </or-plugin>
+                  <or-plugin name="default6" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="84"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="163.177.95.147"/>
+                   </or-plugin>
+            </ip-plugin>
+		<plugin type="com.ifeng.common.plugin.process.AndSuite">
+				<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+		</plugin>
+		 <period type="int" value="60000"/>
+		<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+				<url value="http://223.203.209.250:8090/ifeng/163.177.95.253_53.html"/>
+				<conn-timeout type="java.lang.Integer" value="5000"/>
+				<read-timeout type="java.lang.Integer" value="10000"/>
+		</bandwidth-getter>
+   	 	</value>
+     </entry>
+         <!-- 教育网 -->
+     <entry>
+         <key value="101.7.242.41"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+      		<rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+				<interval type="int" value="60"/>
+				<period type="int" value="1000"/>
+			</rate-calculator>
+			<bak-ipOrCname value="video09.ifeng.com"/>
+			<ipOrCname value="101.7.242.41"/>
+			<max-bandwidth type="int" value="20000000"/>
+			<min-rate-percent type="int" value="90"/>
+	         <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="101.7.242.41"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="101.7.242.42"/>
+                   </or-plugin>                 
+            </ip-plugin>
+			<plugin type="com.ifeng.common.plugin.process.AndSuite">
+				<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+			</plugin>
+			 <period type="int" value="60000"/>
+			<bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+				<url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+				<conn-timeout type="java.lang.Integer" value="5000"/>
+				<read-timeout type="java.lang.Integer" value="10000"/>
+			</bandwidth-getter>
+   	 	</value>
+     </entry>
+    
+     <!-- 成都电信 -->
+     <entry>
+         <key value="222.211.64.195"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                        </rate-calculator>
+                        <bak-ipOrCname value="video09.ifeng.com"/>
+                        <ipOrCname value="222.211.64.195"/>
+                        <max-bandwidth type="int" value="9800000"/>
+                        <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                 <!--
+                 <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="222.211.64.195"/>
+                        </or-plugin>
+                 -->
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="34"/>
+                                <ip  value="222.211.64.220"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="34"/>
+                                <max-percent type="int" value="67"/>
+                                <ip  value="222.211.64.221"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="67"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="222.211.64.222"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/222.211.64.194_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+                </value>
+     </entry>
+
+    <!-- 丰台移动 -->
+     <entry>
+         <key value="221.179.180.243"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                        </rate-calculator>
+                        <bak-ipOrCname value="video09.ifeng.com"/>
+                        <ipOrCname value="221.179.180.243"/>
+                        <max-bandwidth type="int" value="20000000"/>
+                        <min-rate-percent type="int" value="90"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="221.179.180.243"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="221.179.180.244"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      =<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+                </value>
+     </entry>
+     <!-- 青岛联通 -->
+     <entry>
+         <key value="119.167.136.130"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                        </rate-calculator>
+                        <bak-ipOrCname value="video09.ifeng.com"/>
+                        <ipOrCname value="119.167.136.130"/>
+                        <max-bandwidth type="int" value="5900000"/>
+                        <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                  <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="20"/>
+                                <ip  value="119.167.136.130"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="20"/>
+                                <max-percent type="int" value="40"/>
+                                <ip  value="119.167.136.131"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="40"/>
+                                <max-percent type="int" value="60"/>
+                                <ip  value="119.167.136.132"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="60"/>
+                                <max-percent type="int" value="80"/>
+                                <ip  value="119.167.136.133"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="80"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="119.167.136.134"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/119.167.136.254_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+                </value>
+     </entry>
+      <!-- 大连联通 --> 
+    <entry>
+         <key value="218.60.99.5"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                        </rate-calculator>
+                        <bak-ipOrCname value="video09.ifeng.com"/>
+                        <ipOrCname value="218.60.99.5"/>
+                        <max-bandwidth type="int" value="3900000"/>
+                        <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="25"/>
+                                <ip  value="218.60.99.5"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="25"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="218.60.99.6"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="75"/>
+                                <ip  value="218.60.99.7"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="75"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="218.60.99.8"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/218.60.99.1_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+                </value>
+     </entry>
+
+          <!-- 台州电信 --> 
+    <entry>
+         <key value="122.226.161.14"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="122.226.161.14"/>
+              <max-bandwidth type="int" value="4900000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="16"/>
+                                <ip  value="122.226.161.14"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="16"/>
+                                <max-percent type="int" value="33"/>
+                                <ip  value="122.226.161.15"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="33"/>
+                                <max-percent type="int" value="49"/>
+                                <ip  value="122.226.161.16"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="49"/>
+                                <max-percent type="int" value="66"/>
+                                <ip  value="122.226.161.17"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="66"/>
+                                <max-percent type="int" value="83"/>
+                                <ip  value="122.226.161.18"/>
+                   </or-plugin>
+                   <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="83"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="122.226.161.19"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/122.226.161.30_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+    <!-- 广州 移动--> 
+    <entry>
+         <key value="120.197.88.181"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="120.197.88.181"/>
+              <max-bandwidth type="int" value="20000000"/>
+              <min-rate-percent type="int" value="90"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="120.197.88.181"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="120.197.88.182"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+
+   <!-- 江西移动--> 
+    <entry>
+         <key value="183.218.12.114"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="183.218.12.114"/>
+              <max-bandwidth type="int" value="20000000"/>
+              <min-rate-percent type="int" value="90"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="183.218.12.114"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="183.218.12.115"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+        <!-- 济南移动--> 
+    <entry>
+         <key value="120.192.82.17"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="120.192.82.17"/>
+              <max-bandwidth type="int" value="20000000"/>
+              <min-rate-percent type="int" value="90"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="120.192.82.17"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="120.192.82.18"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+         <!-- 长沙电信节点--> 
+    <entry>
+         <key value="175.6.128.12"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="175.6.128.12"/>
+              <max-bandwidth type="int" value="3900000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="20"/>
+                                <ip  value="175.6.128.12"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="20"/>
+                                <max-percent type="int" value="40"/>
+                                <ip  value="175.6.128.13"/>
+                   </or-plugin>
+                   <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="40"/>
+                                <max-percent type="int" value="60"/>
+                                <ip  value="175.6.128.14"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="60"/>
+                                <max-percent type="int" value="80"/>
+                                <ip  value="175.6.128.15"/>
+                   </or-plugin>
+                    <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="80"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="175.6.128.16"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      =<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/175.6.128.1_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+      <!-- 广州汕头节点--> 
+    <entry>
+         <key value="119.147.244.72"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="119.147.244.72"/>
+              <max-bandwidth type="int" value="9900000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="20"/>
+                                <ip  value="119.147.244.72"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="20"/>
+                                <max-percent type="int" value="40"/>
+                                <ip  value="119.147.244.73"/>
+                   </or-plugin>
+                   <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="40"/>
+                                <max-percent type="int" value="60"/>
+                                <ip  value="119.147.244.74"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="60"/>
+                                <max-percent type="int" value="80"/>
+                                <ip  value="119.147.244.75"/>
+                   </or-plugin>
+                    <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="80"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="119.147.244.76"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      =<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/119.147.244.65_54.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry>
+     
+     <!-- 太原联通节点--> 
+    <entry>
+         <key value="221.204.187.170"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="221.204.187.170"/>
+              <max-bandwidth type="int" value="1900000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="25"/>
+                                <ip  value="221.204.187.170"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="25"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="221.204.187.171"/>
+                   </or-plugin>
+                   <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="75"/>
+                                <ip  value="221.204.187.172"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="75"/>
+                                <max-percent type="int" value="200"/>
+                                <ip  value="221.204.187.173"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      =<and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://223.203.209.250:8090/ifeng/221.204.187.190_53.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry> 
+      <!-- 贵州移动节点--> 
+    <entry>
+         <key value="218.201.201.135"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="218.201.201.135"/>
+              <max-bandwidth type="int" value="20000000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="218.201.201.135"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="218.201.201.136"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry> 
+     
+    <!-- 泉州节点--> 
+    <entry>
+         <key value="110.81.153.172"/>
+         <value type="com.ifeng.ipserver.service.impl.node.DynamicNode">
+                <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+                                <interval type="int" value="60"/>
+                                <period type="int" value="1000"/>
+                </rate-calculator>
+              <bak-ipOrCname value="video09.ifeng.com"/>
+              <ipOrCname value="110.81.153.172"/>
+              <max-bandwidth type="int" value="20000000"/>
+              <min-rate-percent type="int" value="92"/>
+              <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+                <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="0"/>
+                                <max-percent type="int" value="25"/>
+                                <ip  value="110.81.153.172"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="25"/>
+                                <max-percent type="int" value="50"/>
+                                <ip  value="110.81.153.173"/>
+                   </or-plugin>
+                   <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="50"/>
+                                <max-percent type="int" value="75"/>
+                                <ip  value="110.81.153.174"/>
+                        </or-plugin>
+                  <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+                                <min-percent type="int" value="75"/>
+                                <max-percent type="int" value="100"/>
+                                <ip  value="110.81.153.175"/>
+                   </or-plugin>
+                </ip-plugin>
+                <plugin type="com.ifeng.common.plugin.process.AndSuite">
+                      <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+                 </plugin>
+                         <period type="int" value="60000"/>
+                        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthGetterImpl">
+                                <url value="http://119.188.2.23:8090/mrtg_qlx/113.140.42.158_50.html"/>
+                                <conn-timeout type="java.lang.Integer" value="5000"/>
+                                <read-timeout type="java.lang.Integer" value="10000"/>
+                        </bandwidth-getter>
+          </value>
+     </entry> 
+     
+     
+     
+     
+   </config>
+   
+</config>

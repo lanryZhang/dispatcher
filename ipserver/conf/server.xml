@@ -1,0 +1,620 @@
+﻿<config>
+
+	${test-properties-file=${IPSERVER_HOME}/conf/server.properties}
+
+	${#${test-properties-file}}
+
+
+
+
+
+	<config type=".LogConfig" file="log4j.xml"></config>
+	<!--<config type=".IncludeConfig" file="nodegroup.xml" direct="true" />-->
+
+<!--	<config type=".IncludeConfig" file="liveNodeGroup.xml" direct="true" />-->
+
+	<!--<config type=".IncludeConfig" file="live3GNodeGroup.xml" direct="true" />-->
+
+	<config type=".IncludeConfig" file="specialNode.xml" direct="true" />
+
+	<config type=".IncludeConfig" file="node.xml" direct="true" />
+
+	<config type=".IncludeConfig" file="liveNode.xml" direct="true" />
+
+	<config type=".IncludeConfig" file="live3gNode.xml" direct="true" />
+
+	<config type=".IncludeConfig" file="requestHost.xml" direct="true" />
+	
+	<config name="areaNodeManager"
+		type="com.ifeng.ipserver.service.impl.AreaNodeManagerImpl">
+
+		<set-property name="areaToNodeMap" type=".MapConfig" />
+
+	</config>
+
+	<config name="areaNodeLiveManager"
+			type="com.ifeng.ipserver.service.impl.AreaNodeManagerImpl">
+
+		<set-property name="areaToNodeMap" type=".MapConfig" />
+
+	</config>
+
+	<config name="areaNodeLive3GManager"
+			type="com.ifeng.ipserver.service.impl.AreaNodeManagerImpl">
+
+		<set-property name="areaToNodeMap" type=".MapConfig" />
+
+	</config>
+
+	<config name="ipRangeManager" type="com.ifeng.ipserver.service.impl.IpRangeImpl">
+
+		<set-property name="ipRangeSet" type="com.ifeng.common.misc.RangeSet" />
+
+	</config>
+
+	
+		<!--area node file update -->
+
+	<config name="ANUpdatePlugin"
+			type="com.ifeng.ipserver.service.listener.plugin.AreaNodeUpdaterPlugin">
+
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeManager" />
+
+		<file-path value="${areaNodeFile}" />
+
+		<separator value="|" />
+
+	</config>
+
+	<!--area node live file update -->
+
+	<config name="ANLUpdatePlugin"
+			type="com.ifeng.ipserver.service.listener.plugin.AreaNodeUpdaterPlugin">
+
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeLiveManager" />
+
+		<file-path value="${areaNodeLiveFile}" />
+
+		<separator value="|" />
+
+	</config>
+
+	<!--area node live3G file update -->
+
+	<config name="ANL3GUpdatePlugin"
+			type="com.ifeng.ipserver.service.listener.plugin.AreaNodeUpdaterPlugin">
+
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeLive3GManager" />
+
+		<file-path value="${areaNodeLive3GFile}" />
+
+		<separator value="|" />
+
+	</config>
+
+
+	<!-- ipRangset file update -->
+
+	<config name="IPRUpdatePlugin"
+		type="com.ifeng.ipserver.service.listener.plugin.IpRangeUpdaterPlugin">
+
+		<iprange-manager type=".ReferenceConfig" reference="ipRangeManager" />
+
+		<file-path value="${ipRangeSetFile}" />
+
+		<separator value="|" />
+
+	</config>
+
+
+
+	<config name="locationPlugin"
+		type="com.ifeng.ipserver.server.handler.plugin.location.LocationPlugin">
+
+		<ip-range-manager type=".ReferenceConfig" reference="ipRangeManager" />
+
+	</config>
+
+
+	<config name="ipfilterPlugin" type="com.ifeng.ipserver.server.handler.plugin.location.IpFileterPlugin">
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeManager" />
+
+		<special-node-map type=".ReferenceConfig"
+						  reference="specialNodeMap" />
+	</config>
+
+	<config name="ipfilterLivePlugin" type="com.ifeng.ipserver.server.handler.plugin.location.IpFilterLivePlugin">
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeLiveManager" />
+
+		<special-node-map type=".ReferenceConfig"
+						  reference="specialNodeMap" />
+	</config>
+
+	<config name="ipfilterLive3GPlugin" type="com.ifeng.ipserver.server.handler.plugin.location.IpFilterLive3GPlugin">
+		<area-node-manager type=".ReferenceConfig"
+						   reference="areaNodeLive3GManager" />
+
+		<special-node-map type=".ReferenceConfig"
+						  reference="specialNodeMap" />
+	</config>
+
+
+	<!-- ips服务handler -->
+
+	<config name="handler"
+		type="com.ifeng.ipserver.server.handler.PluginServerHandler">
+
+		<!-- 根据请求参数REQUEST_MESSAGE确定本次请求的处理方式 -->
+
+		<set-property name="plugin"
+			type="com.ifeng.common.plugin.process.SwitchSuite">
+
+			<switchCondition name="switchCondition"
+				type="com.ifeng.ipserver.server.handler.plugin.ContextSwitchCondition" />
+
+
+
+			<stepModulesMap name="stepModulesMap" type=".MapConfig">
+
+				<entry>
+
+					<!-- location.do为根据ip查询本地信息请求 -->
+
+					<key value="location.do" />
+
+					<value type="com.ifeng.common.plugin.process.AndSuite">
+
+						<and-plugin type=".ReferenceConfig" reference="locationPlugin" />
+
+						<and-plugin type="com.ifeng.ipserver.server.handler.plugin.location.FormatPlugin" />
+
+					</value>
+
+				</entry>
+
+				<entry>
+
+					<!-- liveAllocation.do为直播请求 add-->
+
+					<key value="liveAllocation.do" />
+
+					<value type="com.ifeng.common.plugin.process.AndSuite">
+
+						<and-plugin type=".ReferenceConfig" reference="locationPlugin" />
+					    <and-plugin type=".ReferenceConfig" reference="ipfilterLivePlugin" />
+						<and-plugin type="com.ifeng.ipserver.server.handler.plugin.live.LiveAllocatePlugin">
+							<area-node-manager type=".ReferenceConfig"
+											   reference="areaNodeLiveManager" />
+
+							<dynamic-node-map type=".ReferenceConfig"
+											  reference="liveNodeMap" />
+						</and-plugin>
+
+					</value>
+
+				</entry>
+
+				<entry>
+
+					<!-- crossdomain.xml解决flash访问跨域 -->
+
+					<key value="crossdomain.xml" />
+
+					<value
+						type="com.ifeng.ipserver.server.handler.plugin.live.CrossDomainPlugin">
+
+						<set-property name="loadFile" type="java.lang.String"
+							value="${com.ifeng.ipserver.crossdomain.file}" />
+
+					</value>
+
+				</entry>
+
+			</stepModulesMap>
+
+			<!-- 默认处理方式是将请求直接302到对应的服务器 -->
+
+			<default name="redirectHandle" type="com.ifeng.common.plugin.process.AndSuite">
+
+				<and-plugin type=".ReferenceConfig" reference="locationPlugin" />
+				<and-plugin type="com.ifeng.common.plugin.process.SwitchSuite">
+
+					<switchCondition name="switchCondition"
+						type="com.ifeng.ipserver.server.handler.plugin.HostSwitchCondition" />
+
+					<stepModulesMap name="stepModulesMap" type=".MapConfig">
+
+						<entry>
+
+							<key value="live.3gv.ifeng.com" />
+
+							<value type="com.ifeng.common.plugin.process.AndSuite">
+								<and-plugin type=".ReferenceConfig" reference="ipfilterLive3GPlugin" />
+
+								<and-plugin type="com.ifeng.ipserver.server.handler.plugin.redirect.Live3GRedirectPlugin">
+
+									<area-node-manager type=".ReferenceConfig"
+													   reference="areaNodeLive3GManager" />
+
+									<dynamic-node-map type=".ReferenceConfig"
+													  reference="live3GNodeMap" />
+
+								</and-plugin>
+
+							</value>
+
+						</entry>
+						<entry>
+
+							<key value="zv.3gv.ifeng.com" />
+
+							<value type="com.ifeng.common.plugin.process.AndSuite">
+								<and-plugin type=".ReferenceConfig" reference="ipfilterLive3GPlugin" />
+
+								<and-plugin type="com.ifeng.ipserver.server.handler.plugin.redirect.Live3GRedirectPlugin">
+
+									<area-node-manager type=".ReferenceConfig"
+													   reference="areaNodeLive3GManager" />
+
+									<dynamic-node-map type=".ReferenceConfig"
+													  reference="live3GNodeMap" />
+
+								</and-plugin>
+
+							</value>
+
+						</entry>
+					</stepModulesMap>
+
+					<default name="videoHandle" type="com.ifeng.common.plugin.process.AndSuite">
+
+						<and-plugin type="com.ifeng.ipserver.server.handler.plugin.redirect.PreHostPlugin">
+
+							<host-map type=".ReferenceConfig" reference="requestHostMap" />
+
+						</and-plugin>
+
+						<and-plugin type=".ReferenceConfig" reference="ipfilterPlugin" />
+
+						
+						<and-plugin type="com.ifeng.ipserver.server.handler.plugin.redirect.RedirectPlugin">
+
+							<area-node-manager type=".ReferenceConfig"
+											   reference="areaNodeManager" />
+
+							<dynamic-node-map type=".ReferenceConfig"
+											  reference="nodeMap" />
+						</and-plugin>
+
+					</default>
+
+				</and-plugin>
+
+			</default>
+
+		</set-property>
+
+	</config>
+
+
+
+	<!-- area node file download -->
+
+	<config name="ANDownloaderPlugin"
+		type="com.ifeng.ipserver.service.listener.plugin.DownloaderPlugin">
+
+		<url value="${areaNodeUrl}" />
+
+		<file-path value="${areaNodeFile}" />
+
+		<conn-timeout type="java.lang.Integer" value="30000" />
+
+		<read-timeout type="java.lang.Integer" value="30000" />
+
+		<plugin type="com.ifeng.ipserver.service.email.SimpleEmailPlugin">
+			<!--多个收件人地址已逗号分隔 -->
+			<maillist value="zhanglr@ifeng.com" />
+			<copyto value="" />
+			<sendMailUrl value="http://rtd.ifeng.com/rotdam" />
+			<maxSendTimes type="java.lang.Integer" value="5" />
+			<minErrorTimes type="java.lang.Integer" value="5" />
+		</plugin>
+	</config>
+
+	<!-- area live node file download -->
+
+	<config name="ANLDownloaderPlugin"
+			type="com.ifeng.ipserver.service.listener.plugin.DownloaderPlugin">
+
+		<url value="${areaNodeLiveUrl}" />
+
+		<file-path value="${areaNodeLiveFile}" />
+
+		<conn-timeout type="java.lang.Integer" value="30000" />
+
+		<read-timeout type="java.lang.Integer" value="30000" />
+
+		<plugin type="com.ifeng.ipserver.service.email.SimpleEmailPlugin">
+			<!--多个收件人地址已逗号分隔 -->
+			<maillist value="zhanglr@ifeng.com" />
+			<copyto value="" />
+			<sendMailUrl value="http://rtd.ifeng.com/rotdam" />
+			<maxSendTimes type="java.lang.Integer" value="5" />
+			<minErrorTimes type="java.lang.Integer" value="5" />
+		</plugin>
+	</config>
+
+	<!-- area live3g node file download -->
+
+	<config name="ANL3GDownloaderPlugin"
+			type="com.ifeng.ipserver.service.listener.plugin.DownloaderPlugin">
+
+		<url value="${areaNodeLive3GUrl}" />
+
+		<file-path value="${areaNodeLive3GFile}" />
+
+		<conn-timeout type="java.lang.Integer" value="30000" />
+
+		<read-timeout type="java.lang.Integer" value="30000" />
+
+		<plugin type="com.ifeng.ipserver.service.email.SimpleEmailPlugin">
+			<!--多个收件人地址已逗号分隔 -->
+			<maillist value="zhanglr@ifeng.com" />
+			<copyto value="" />
+			<sendMailUrl value="http://rtd.ifeng.com/rotdam" />
+			<maxSendTimes type="java.lang.Integer" value="5" />
+			<minErrorTimes type="java.lang.Integer" value="5" />
+		</plugin>
+	</config>
+
+
+	<!-- ipRangset file download -->
+
+	<config name="IPRDownloaderPlugin"
+		type="com.ifeng.ipserver.service.listener.plugin.DownloaderPlugin">
+
+		<url value="${ipRangeSetUrl}" />
+
+		<file-path value="${ipRangeSetFile}" />
+
+		<conn-timeout type="java.lang.Integer" value="3000" />
+
+		<read-timeout type="java.lang.Integer" value="3000" />
+
+		<plugin type="com.ifeng.ipserver.service.email.SimpleEmailPlugin">
+			<!--多个收件人地址已逗号分隔 -->
+			<maillist value="zhanglr@ifeng.com" />
+			<copyto value="" />
+			<sendMailUrl value="http://rtd.ifeng.com/rotdam" />
+			<maxSendTimes type="java.lang.Integer" value="5" />
+			<minErrorTimes type="java.lang.Integer" value="5" />
+		</plugin>
+	</config>
+
+
+
+	<!-- 定时任务，远程监控areanode和ipRangeset文件的版本信息，有变化则更新AreaNodeManager和Ip -->
+
+	<config name="httpFTSListener"
+		type="com.ifeng.ipserver.service.listener.HttpFileTimeStampListener">
+
+		<timestamp-file-path value="${versionFile}" />
+
+		<local-plugin type="com.ifeng.common.plugin.process.AndSuite">
+
+			<and-plugin name="anlocalupdate" type=".ReferenceConfig"
+				reference="ANUpdatePlugin" />
+			<and-plugin name="anllocalupdate" type=".ReferenceConfig"
+						reference="ANLUpdatePlugin" />
+			<and-plugin name="anl3glocalupdate" type=".ReferenceConfig"
+						reference="ANL3GUpdatePlugin" />
+			<and-plugin name="iprlocalupdate" type=".ReferenceConfig"
+				reference="IPRUpdatePlugin" />
+
+		</local-plugin>
+		<net-plugin type="com.ifeng.common.plugin.process.AndSuite">
+
+			<and-plugin name="andownload" type=".ReferenceConfig"
+				reference="ANDownloaderPlugin" />
+
+			<and-plugin name="annetupdate" type=".ReferenceConfig"
+				reference="ANUpdatePlugin" />
+
+			<and-plugin name="anldownload" type=".ReferenceConfig"
+						reference="ANLDownloaderPlugin" />
+			<and-plugin name="anllocalupdate" type=".ReferenceConfig"
+						reference="ANLUpdatePlugin" />
+
+			<and-plugin name="iprdownload" type=".ReferenceConfig"
+				reference="IPRDownloaderPlugin" />
+
+			<and-plugin name="iprnetdownload" type=".ReferenceConfig"
+				reference="IPRUpdatePlugin" />
+			
+		</net-plugin>
+		<plugin type="com.ifeng.ipserver.service.email.SimpleEmailPlugin">
+			<!--多个收件人地址已逗号分隔 -->
+			<maillist value="zhanglr@ifeng.com" />
+			<copyto value="" />
+			<sendMailUrl value="http://rtd.ifeng.com/rotdam" />
+			<maxSendTimes type="java.lang.Integer" value="5" />
+			<minErrorTimes type="java.lang.Integer" value="5" />
+		</plugin>
+		<period type="java.lang.Long" value="60000" />
+
+		<http-file-url value="${versionUrl}" />
+
+		<conn-timeout type="java.lang.Integer" value="3000" />
+
+		<read-timeout type="java.lang.Integer" value="3000" />
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/node.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.DynamicnodeUpdaterPlugin">
+
+			<dynamic-map type=".ReferenceConfig" reference="nodeMap" />
+
+			<map-name value="nodeMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/liveNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin">
+
+			<dynamic-map type=".ReferenceConfig" reference="liveNodeMap" />
+
+			<map-name value="liveNodeMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/live3gNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin">
+
+			<dynamic-map type=".ReferenceConfig" reference="live3GNodeMap" />
+
+			<map-name value="live3GNodeMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/specialNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="specialNodeMap" />
+
+			<map-name value="specialNodeMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/node.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="groupMap" />
+
+			<map-name value="groupMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/live3gNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="live3gGroupMap" />
+
+			<map-name value="live3gGroupMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/liveNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="liveGroupMap" />
+
+			<map-name value="liveGroupMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/liveNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="channelMap" />
+
+			<map-name value="channelMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/live3gNode.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="live3gChannelMap" />
+
+			<map-name value="live3gChannelMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+
+	<config type="com.ifeng.ipserver.service.listener.FileUpdateListener">
+
+		<file-path value="${IPSERVER_HOME}/conf/requestHost.xml" />
+
+		<plugin type="com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin">
+
+			<update-map type=".ReferenceConfig" reference="requestHostMap" />
+
+			<map-name value="requestHostMap" />
+
+		</plugin>
+
+		<period type="java.lang.Long" value="30000" />
+
+	</config>
+
+</config>
+

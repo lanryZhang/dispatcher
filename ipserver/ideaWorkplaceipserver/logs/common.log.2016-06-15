@@ -1,0 +1,1200 @@
+[15 08:57:07,757 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:29:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:30:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 08:57:07,794 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:37:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:38:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 08:57:07,795 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:45:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:46:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 09:18:27,725 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:29:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:30:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 09:18:27,761 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:37:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:38:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 09:18:27,762 ERROR] [main] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:45:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:46:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.server.Server.main(Server.java:69)
+[15 09:23:38,629 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:29:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:30:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 09:23:38,631 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:37:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:38:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 09:23:38,633 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:45:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:46:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 09:23:38,718 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:29:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:30:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 09:23:38,749 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:37:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:38:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 09:23:38,749 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:45:82
+java.lang.RuntimeException: Missing element 'live3g-url' as child of element 'or-plugin' at file:D:/ideaWorkplace/ipserver/conf/liveNode.xml:46:93
+	at com.ifeng.common.misc.XmlLoader.getChildElement(XmlLoader.java:396)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:336)
+	at com.ifeng.common.conf.ConfigRoot.createChildObject(ConfigRoot.java:346)
+	at com.ifeng.ipserver.service.impl.node.plugin.GetCdnUrlPlugin.config(GetCdnUrlPlugin.java:88)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.createValueObject(ConfigRoot.java:397)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.configSubPlugin(AbstSuite.java:69)
+	at com.ifeng.common.plugin.process.OrSuite.configSubPlugin(OrSuite.java:33)
+	at com.ifeng.common.plugin.core.abst.AbstSuite.config(AbstSuite.java:59)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.appendTo(MapConfig.java:132)
+	at com.ifeng.common.conf.IncludeConfig.configDirectInclude(IncludeConfig.java:91)
+	at com.ifeng.common.conf.IncludeConfig.config(IncludeConfig.java:52)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+[15 13:34:37,597 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:34:37,584 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:34:56,257 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,304 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,377 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,715 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,837 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,805 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 13:52:24,604 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:10:01,189 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicnodeUpdaterPlugin.execute(DynamicnodeUpdaterPlugin.java:33)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:08,596 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:09,758 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:10,940 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:16,476 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:24,600 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:12:30,031 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,576 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,338 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,335 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,334 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,332 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,330 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:20,544 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:20,107 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,877 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,876 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:24:19,866 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:39,278 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:25,533 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:25,528 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:25,525 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLiveNodeUpdaterPlugin.execute(DynamicLiveNodeUpdaterPlugin.java:32)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:18,860 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:31:04,471 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:39:02,576 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:58:25,732 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:58:26,745 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.DynamicLive3gNodeUpdaterPlugin.execute(DynamicLive3gNodeUpdaterPlugin.java:27)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more
+[15 14:58:33,585 ERROR] [nodeUpdateTimer] common.conf.MapConfig - Error loading config: [config: null]: file:D:/ideaWorkplace/ipserver/conf/server.xml:11:45
+java.lang.RuntimeException: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:93)
+	at com.ifeng.common.conf.LogConfig.config(LogConfig.java:41)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.MapConfig.doConfig(MapConfig.java:101)
+	at com.ifeng.common.conf.MapConfig.config(MapConfig.java:57)
+	at com.ifeng.common.conf.ConfigRoot.configValueObject(ConfigRoot.java:448)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:247)
+	at com.ifeng.common.conf.ConfigRoot.init(ConfigRoot.java:203)
+	at com.ifeng.common.conf.ConfigRoot.<init>(ConfigRoot.java:166)
+	at com.ifeng.ipserver.service.listener.plugin.MapUpdaterPlugin.execute(MapUpdaterPlugin.java:36)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener.init(FileUpdateListener.java:48)
+	at com.ifeng.ipserver.service.listener.FileUpdateListener$UpdateTask.run(FileUpdateListener.java:73)
+	at java.util.TimerThread.mainLoop(Timer.java:512)
+	at java.util.TimerThread.run(Timer.java:462)
+Caused by: java.lang.RuntimeException: java.util.NoSuchElementException: Vector Enumeration
+	at com.ifeng.common.misc.Logger.configure(Logger.java:131)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:89)
+	... 13 more
+Caused by: java.util.NoSuchElementException: Vector Enumeration
+	at java.util.Vector$1.nextElement(Vector.java:305)
+	at com.ifeng.common.misc.Logger.configure(Logger.java:110)
+	... 14 more

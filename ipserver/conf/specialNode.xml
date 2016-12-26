@@ -1,0 +1,22 @@
+<config>
+  <config name="specialNodeMap" type=".MapConfig">
+    <entry>
+      <key value="BBB"/>
+      <value type="com.ifeng.ipserver.service.impl.node.SpecialNode">
+        <cdn-id value="ifengP2P"/>
+        <urlLive value="http://livews.ifeng.com"/>
+        <url3G value="http://ips.ifeng.com/video19.ifeng.com/video09/2015/08/07/warn.mp4"/>
+        <url value="http://ips.ifeng.com/video19.ifeng.com/video09/2015/08/07/warn.mp4"/>
+      </value>
+    </entry>
+    <entry>
+      <key value="CCC"/>
+      <value type="com.ifeng.ipserver.service.impl.node.SpecialNode">
+        <cdn-id value="ifengP2P"/>
+        <urlLive value="http://livews.ifeng.com"/>
+        <url3G value="http://ips.ifeng.com/video19.ifeng.com/video09/2015/08/07/warn.mp4"/>
+        <url value="http://ips.ifeng.com/video19.ifeng.com/video09/2015/08/07/warn.mp4"/>
+      </value>
+    </entry>
+  </config>
+</config>

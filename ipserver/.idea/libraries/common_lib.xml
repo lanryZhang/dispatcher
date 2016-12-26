@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="common-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/slf4j-log4j12-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/jta-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/concurrentlinkedhashmap-lru-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/cglib-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/commons-lang3-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/hibernate3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/slf4j-api-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/antlr-3.4-complete.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/ehcache-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/asm-all-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/log4j-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lib/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

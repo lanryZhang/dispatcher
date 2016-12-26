@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ifeng.ipserver.bean.db" default-lazy="false" >
+  <class name="IpBase" table="t_IPBASE" dynamic-update="true">
+    <id name="seq" column="seq" type="long">
+      <generator class="assigned"/>
+    </id>
+    <property name="startIp" column="ipfirst" type="string" length="60"/>
+    <property name="endIp" column="iptail" type="string" length="60"/>
+    <property name="netname" column="netname" type="string" length="60"/>
+    <property name="province" column="province" type="string" length="60"/>
+    <property name="city" column="city" type="string" length="60"/>
+  </class>
+</hibernate-mapping>

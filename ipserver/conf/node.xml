@@ -1,0 +1,528 @@
+<config>
+  <config name="rateLimitPlugin" type="com.ifeng.common.plugin.process.OrSuite">
+    <or-plugin name="ratePlugin60" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="60"/>
+      <max-percent type="int" value="70"/>
+      <outof-percent type="int" value="2"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin70" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="70"/>
+      <max-percent type="int" value="85"/>
+      <outof-percent type="int" value="2"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin90" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="85"/>
+      <max-percent type="int" value="90"/>
+      <outof-percent type="int" value="2"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin95" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="90"/>
+      <max-percent type="int" value="95"/>
+      <outof-percent type="int" value="15"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin96" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="95"/>
+      <max-percent type="int" value="98"/>
+      <outof-percent type="int" value="25"/>
+    </or-plugin>
+    <or-plugin name="ratePlugin98" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="98"/>
+      <max-percent type="int" value="100"/>
+      <outof-percent type="int" value="30"/>
+    </or-plugin>
+    <or-plugin name="ratePluginMax" type="com.ifeng.ipserver.service.impl.node.plugin.RateContrlerPlugin">
+      <min-percent type="int" value="100"/>
+      <max-percent type="int" value="1000000000"/>
+      <outof-percent type="int" value="100"/>
+    </or-plugin>
+  </config>
+  <config name="bandWidthMap" type=".MapConfig"/>
+  <config name="bandWidthUpdate" type="com.ifeng.ipserver.service.impl.node.bandwidth.BandwidthUpdate">
+    <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+    <conn-timeout type="int" value="5000"/>
+    <read-timeout type="int" value="5000"/>
+    <typeValue value="OUT"/>
+    <period type="int" value="5000"/>
+    <url value="http://m.ifengidc.com/api/network/networkapi.txt"/>
+  </config>
+  <config name="groupMap" type=".MapConfig">
+    <entry>
+      <key value="华东电信"/>
+      <value type="com.ifeng.ipserver.service.impl.node.GroupNode">
+        <node>61.155.167.50</node>
+        <node>60.174.235.80</node>
+        <node>122.226.184.20</node>
+      </value>
+    </entry>
+    <entry>
+      <key value="华中电信"/>
+      <value type="com.ifeng.ipserver.service.impl.node.GroupNode">
+        <node>175.6.128.17</node>
+        <node>119.97.156.137</node>
+      </value>
+    </entry>
+    <entry>
+      <key value="西南电信"/>
+      <value type="com.ifeng.ipserver.service.impl.node.GroupNode">
+        <node>222.211.64.223</node>
+        <node>125.64.133.70</node>
+      </value>
+    </entry>
+    <entry>
+      <key value="华北联通"/>
+      <value type="com.ifeng.ipserver.service.impl.node.GroupNode">
+        <node>125.39.142.80</node>
+        <node>61.182.139.53</node>
+      </value>
+    </entry>
+    <entry>
+      <key value="华东联通"/>
+      <value type="com.ifeng.ipserver.service.impl.node.GroupNode">
+        <node>119.167.138.3</node>
+        <node>119.167.138.78</node>
+        <node>153.3.230.23</node>
+      </value>
+    </entry>
+  </config>
+  <config name="nodeMap" type=".MapConfig">
+    <entry>
+      <key value="118.186.27.34"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="118.186.27.34"/>
+        <max-bandwidth type="long" value="400000000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="ISP1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="33"/>
+            <ip value="118.186.27.34"/>
+          </or-plugin>
+          <or-plugin name="ISP2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="33"/>
+            <max-percent type="int" value="66"/>
+            <ip value="118.186.27.35"/>
+          </or-plugin>
+          <or-plugin name="ISP3" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="66"/>
+            <max-percent type="int" value="100"/>
+            <ip value="118.186.27.36"/>
+          </or-plugin>
+        </ip-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="北京isp联盟"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="119.167.138.3"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="119.167.138.3"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="青岛联通出口10G"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="120.192.82.17"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="video19.ifeng.com"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="50"/>
+            <ip value="video19.ifeng.com"/>
+          </or-plugin>
+          <or-plugin name="default2" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="100"/>
+            <ip value="video19.ifeng.com"/>
+          </or-plugin>
+        </ip-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="60000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="济南移动"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="123.151.185.101"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="123.151.185.101"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="75"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="60000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="北京-鹏博士-天津电信"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="125.39.142.80"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="125.39.142.80"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="75"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="北京-鹏博士-天津联通"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="125.39.68.100"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="125.39.68.100"/>
+        <max-bandwidth type="long" value="6800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="电信通_天津电信"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="125.64.133.70"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="125.64.133.70"/>
+        <max-bandwidth type="long" value="5800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="宜宾电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="139.215.200.169"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="139.215.200.169"/>
+        <max-bandwidth type="long" value="5900000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="长春联通"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="14.17.115.2"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="14.17.115.2"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="60"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="中山电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="153.3.230.23"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="153.3.230.23"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="75"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="南京联通出口"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="220.170.181.165"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="220.170.181.165"/>
+        <max-bandwidth type="long" value="4000000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="长沙电信"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="221.204.238.252"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="221.204.34.12"/>
+        <max-bandwidth type="long" value="7500000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="山西联通"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="23.244.76.218"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="23.244.76.218"/>
+        <max-bandwidth type="long" value="950000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="218" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="50"/>
+            <ip value="23.244.76.218"/>
+          </or-plugin>
+          <or-plugin name="74" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="50"/>
+            <max-percent type="int" value="100"/>
+            <ip value="23.244.84.74"/>
+          </or-plugin>
+        </ip-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="美国洛杉矶"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="60.174.235.80"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="60.174.235.80"/>
+        <max-bandwidth type="long" value="9800000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="合肥电信出口流量"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="61.155.167.50"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="61.155.167.50"/>
+        <max-bandwidth type="long" value="29800000"/>
+        <min-rate-percent type="int" value="75"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <ip-plugin type="com.ifeng.common.plugin.process.OrSuite">
+          <or-plugin name="default1" type="com.ifeng.ipserver.service.impl.node.plugin.GetIpPlugin">
+            <min-percent type="int" value="0"/>
+            <max-percent type="int" value="100"/>
+            <ip value="61.155.167.50"/>
+          </or-plugin>
+        </ip-plugin>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="60000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="苏州电信出口流量汇总"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="61.163.113.230"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="61.163.113.230"/>
+        <max-bandwidth type="long" value="5900000"/>
+        <min-rate-percent type="int" value="85"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="5000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="新乡联通出口"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+    <entry>
+      <key value="default"/>
+      <value type="com.ifeng.ipserver.service.impl.node.DynamicNewNode">
+        <rate-calculator type="com.ifeng.ipserver.service.impl.rate.RateCalculator">
+          <interval type="int" value="60"/>
+          <period type="int" value="1000"/>
+        </rate-calculator>
+        <bak-ipOrCname value="video19.ifeng.com"/>
+        <ipOrCname value="default"/>
+        <max-bandwidth type="long" value="1"/>
+        <min-rate-percent type="int" value="0"/>
+        <bandwidthReference type="double" value="1.0"/>
+        <isReference value="true"/>
+        <plugin type="com.ifeng.common.plugin.process.AndSuite">
+          <and-plugin type=".ReferenceConfig" reference="rateLimitPlugin"/>
+        </plugin>
+        <period type="int" value="600000"/>
+        <bandwidth-getter type="com.ifeng.ipserver.service.impl.node.bandwidth.NewBandwidthGetterImpl">
+          <bandwidth-map type=".ReferenceConfig" reference="bandWidthMap"/>
+          <key value="default"/>
+        </bandwidth-getter>
+      </value>
+    </entry>
+  </config>
+</config>

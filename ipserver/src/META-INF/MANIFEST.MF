@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Class-Path: jta-1.1.jar hibernate3.jar cglib-2.2.2.jar dom4j-1.6.1.jar
+  ehcache-1.1.jar log4j-1.2.16.jar asm-all-3.3.1.jar slf4j-api-1.6.1.j
+ ar antlr-3.4-complete.jar commons-lang3-3.0.1.jar slf4j-log4j12-1.6.1
+ .jar commons-logging-1.1.1.jar commons-beanutils-1.8.3.jar commons-co
+ llections-3.2.1.jar concurrentlinkedhashmap-lru-1.2.jar mail.jar derb
+ y.jar icommon.jar ojdbc14.jar ipserver.jar junit-4.9.jar xom-1.2.7.ja
+ r c3p0-0.9.0.jar jmock-2.5.1.jar ezmorph-1.0.6.jar httpcore-4.0.1.jar
+  httpmime-4.0.1.jar mina-core-2.0.4.jar commons-io-2.0.1.jar commons-
+ lang-2.6.jar httpclient-4.0.1.jar apache-mime4j-0.6.jar jmock-junit3-
+ 2.5.1.jar jmock-legacy-2.5.1.jar json-lib-2.4-jdk15.jar jsontools-cor
+ e-1.7.jar mina-integration-beans-2.0.4.jar
+Main-Class: com.ifeng.ipserver.server.Server
+

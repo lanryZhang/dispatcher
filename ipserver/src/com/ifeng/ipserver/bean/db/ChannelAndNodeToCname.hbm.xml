@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN" 
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ifeng.ipserver.bean.db" default-lazy="false" >
+  <class name="ChannelAndNodeToCname" table="T_NODE_CHANNEL" dynamic-update="true">
+	<composite-id name="channelAndNodeToCnamePK">
+         <key-property name="nodeId" type="long" column="nodeId" length="20"/>
+         <key-property name="channelId" type="long" column="channelId" length="60"/>
+    </composite-id>
+    <property name="type" column="type" type="string" length="60"/>
+    <property name="ip" column="ip" type="string" length="60"/>
+    <property name="cname" column="cname" type="string" length="60"/>
+    <property name="channelId1" column="channelId" type="long" length="60" insert="false" update="false"/>
+  </class>
+</hibernate-mapping>
